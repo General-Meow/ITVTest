@@ -1,0 +1,41 @@
+<h2>Register</h2>
+<form class="pure-form pure-form-aligned" #registerForm="ngForm" (ngSubmit)="derp(registerForm)">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="firstname">Firstname: </label>
+      <input id="firstname" type="text" name="firstname" required ngModel>
+    </div>
+    <div class="pure-control-group">
+      <label for="lastname">Lastname: </label>
+      <input id="lastname" type="text" name="lastname" required ngModel>
+    </div>
+    <div class="pure-control-group">
+      <label for="email">Email: </label>
+      <input id="email" type="email" name="email" required ngModel>
+    </div>
+    <div class="pure-control-group">
+      <label for="telephone">Telephone number: </label>
+      <input id="telephone" type="tel" name="telephone" pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$" ngModel><br>
+    </div>
+    <div class="pure-control-group">
+      <label for="dob">Date of birth: </label>
+      <input id="dob" type="date" name="dob" min="1900-01-01" max="2016-01-01" ngModel>
+    </div>
+    <div class="pure-control-group">
+      <label>Sign up to newsletter: </label>
+    </div>
+    <div class="pure-control-group">
+      <label for="newsletterYes" class="pure-radio">
+        <input id="newsletterYes" type="radio" name="newsletter" value="true" checked="checked" ngModel>
+        Yes
+      </label>
+      <label for="newsletterNo" class="pure-radio">
+        <input id="newsletterNo" type="radio" name="newsletter" value="false" ngModel>
+        No
+      </label>
+    </div>
+    <div class="pure-controls">
+      <button class="pure-button pure-button-primary" type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
