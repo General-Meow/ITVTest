@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, RequestOptions, Headers } from '@angular/http';
 
 @Component({
   selector: 'app-register',
@@ -7,14 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  postData: string;
+  postResult: string;
+
+  private postURL: string = 'http://mockbin.org/bin/5f4060a1-d7e7-4b64-80c0-061c091f977a'; //this would be the proper url
+  constructor(private http: Http) { }
 
   ngOnInit() {
   }
 
-  derp(form){
-    console.log("derp");
-    console.log(form);
+  submit(form){
+    console.log("About to post form");
+    this.postData = JSON.stringify(form.value);
+
+    this.http.post(this.postURL, this.postData, options)
+    .subscribe((result) => {
+      console.log(result.text());
+      this.postResult = result.text();
+    });
   }
 
 }

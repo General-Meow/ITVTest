@@ -9,6 +9,17 @@ To see the default readme scroll down to the default read text section.
 - All validation is done on the form itself
 - For styling, purecss was used. this is because its simple and small. I'd much rather use this than bootstrap
 
+- To Run: you need angular cli - just install with npm
+- ng build
+- ng serve
+
+To Run tests:
+- ng test
+- ng e2e
+
+If i had more time id fix the posting of data. its currently broken with CORS, fix the styling,
+add more tests etc
+
 ## Default readme text...
 
 ## Development server
@@ -38,4 +49,3 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-

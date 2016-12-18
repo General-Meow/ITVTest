@@ -1,5 +1,5 @@
 <h2>Register</h2>
-<form class="pure-form pure-form-aligned" #registerForm="ngForm" (ngSubmit)="derp(registerForm)">
+<form class="pure-form pure-form-aligned" #registerForm="ngForm" (ngSubmit)="submit(registerForm)">
   <fieldset>
     <div class="pure-control-group">
       <label for="firstname">Firstname: </label>
@@ -26,7 +26,7 @@
     </div>
     <div class="pure-control-group">
       <label for="newsletterYes" class="pure-radio">
-        <input id="newsletterYes" type="radio" name="newsletter" value="true" checked="checked" ngModel>
+        <input id="newsletterYes" type="radio" name="newsletter" value="true" checked ngModel>
         Yes
       </label>
       <label for="newsletterNo" class="pure-radio">
@@ -39,3 +39,7 @@
     </div>
   </fieldset>
 </form>
+
+<p class='postData'>
+  {{postData}}
+</p>
